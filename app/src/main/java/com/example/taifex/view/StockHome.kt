@@ -20,8 +20,6 @@ import com.example.taifex.viewmodel.StockViewModel
 
 @Composable
 fun StockHome(paddingValues: PaddingValues, stockViewModel: StockViewModel) {
-//    val stockRepository = StockRepository()
-//    val stockViewModel: StockViewModel = viewModel(factory = StockViewModelFactory(stockRepository))
     val stockData = stockViewModel.sortStockData.collectAsState()
     val isLoading = stockViewModel.isLoading.collectAsState()
     val sortOrder = stockViewModel.sortOrder.collectAsState()
@@ -40,7 +38,6 @@ fun StockHome(paddingValues: PaddingValues, stockViewModel: StockViewModel) {
         items(stockData.value) { stock ->
             StockCard(stock, onClick = {
                 stockViewModel.selectStockData(stock)
-//                showDialog = true // 點擊後顯示 AlertDialog
             })
         }
     }
@@ -58,12 +55,3 @@ fun StockHome(paddingValues: PaddingValues, stockViewModel: StockViewModel) {
         }
     }
 }
-
-
-//@Preview
-//@Composable
-//fun PreviewStockHome() {
-//    TaifexTheme {
-//        StockHome(paddingValues = PaddingValues())
-//    }
-//}

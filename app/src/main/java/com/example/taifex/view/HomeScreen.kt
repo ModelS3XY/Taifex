@@ -41,8 +41,6 @@ fun HomeScreen() {
     var sortOrder by remember { mutableStateOf("desc") }
     val selectStock = stockViewModel.selectStockData.collectAsState()
 
-//    val sortedData = remember { mutableStateOf(sampleData) }
-
     if (showDialog) {
         ModalBottomSheet(
             onDismissRequest = { showDialog = false },

@@ -12,7 +12,7 @@ class StockRepository {
         val averagePriceData = api.getAveragePriceData()
         val tradeData = api.getTradeData()
 
-        // 根據 Code組合
+        // 根據Code組合
         return tradeData.map { trade ->
             val pe = peData.find { it.code == trade.code }
             val avgPrice = averagePriceData.find { it.code == trade.code }

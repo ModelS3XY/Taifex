@@ -9,8 +9,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class StockViewModel(private val repository: StockRepository) : ViewModel() {
-//    private val _stockData = MutableStateFlow<List<StockData>>(emptyList())
-//    val stockData: StateFlow<List<StockData>> = _stockData
 
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
@@ -30,7 +28,6 @@ class StockViewModel(private val repository: StockRepository) : ViewModel() {
             try {
                 val data = repository.getCombinedStockData()
                 _sortStockData.value = data.sortedByDescending { it.code }
-//                _stockData.value = data
             } catch (e: Exception) {
                 e.printStackTrace()
             } finally {
