@@ -1,0 +1,6 @@
+對接臺灣證券交易所服務API
+畫面使用Android Compose
+MVVM架構
+網路使用Retrofit
+資料解析使用GSON
+Compose的LifeCycle及ViewModel
