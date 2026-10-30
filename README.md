@@ -1,20 +1,8 @@
-對接臺灣證券交易所服務API
-畫面使用Android Compose
-MVVM架構
-網路使用Retrofit
-資料解析使用GSON
-Compose的LifeCycle及ViewModel
-
 # Taifex — TWSE Stock Overview (Android)
 
 An Android app that pulls daily market data from the Taiwan Stock Exchange (TWSE) Open API and shows every listed stock with its price, volume and valuation metrics in one list.
 
 <!-- Add 2–3 screenshots here: the stock list, the sort sheet, and the valuation dialog -->
-<p>
-  <img src="docs/list.png" width="240" />
-  <img src="docs/sort.png" width="240" />
-  <img src="docs/detail.png" width="240" />
-</p>
 
 ## Features
 
